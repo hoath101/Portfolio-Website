@@ -1,6 +1,7 @@
 import SectionHeading from "@/components/SectionHeading";
 import { projects } from "@/lib/projects";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectsSection() {
   return (
@@ -24,18 +25,18 @@ export default function ProjectsSection() {
                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex gap-4">
-                  <a
+                  <Link
                     href={project.demo}
                     className="text-blue-600 hover:underline"
                   >
                     Live Demo
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={project.github}
                     className="text-gray-700 hover:underline"
                   >
                     GitHub
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
